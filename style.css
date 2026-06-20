@@ -453,3 +453,124 @@ body {
         text-align: center;
     }
 }
+/* Стили для внутренних страниц */
+.page-banner {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #343a40 100%);
+    color: var(--white);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.page-banner h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.page-banner p {
+    color: #cbd5e1;
+    font-size: 16px;
+}
+
+.about-page-content, .prices-page-content {
+    padding: 60px 0;
+}
+
+.about-text-block {
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+.about-text-block h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #1a2530;
+}
+
+/* Сетка документов */
+.docs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.doc-card {
+    background: var(--bg-light);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+}
+
+.doc-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.doc-card h5 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.doc-card p {
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* Современные таблицы цен */
+.table-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 40px 0 20px;
+    color: #1a2530;
+}
+
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    margin-bottom: 20px;
+}
+
+.modern-table th, .modern-table td {
+    padding: 16px 20px;
+    text-align: left;
+}
+
+.modern-table th {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+}
+
+.modern-table td {
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+}
+
+.modern-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Подсветка активной страницы в меню */
+.nav-menu a.active-page {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* Адаптивность для таблиц и доков */
+@media (max-width: 768px) {
+    .docs-grid {
+        grid-template-columns: 1fr;
+    }
+    .modern-table th, .modern-table td {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+}
