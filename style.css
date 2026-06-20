@@ -574,3 +574,59 @@ body {
         font-size: 14px;
     }
 }
+/* --- СТИЛИ ДЛЯ ОБНОВЛЕННОГО БЛОКА СПЕЦИАЛИСТОВ --- */
+
+/* Адаптивность для карточек врачей */
+@media (max-width: 768px) {
+    .team-section div[style*="display: flex"] {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 25px 20px !important;
+    }
+    .team-section div[style*="text-align: left"] {
+        text-align: center !important;
+    }
+    .team-section details {
+        text-align: left !important;
+    }
+}
+
+/* Красивое оформление раскрывающихся списков курсов */
+.team-section details {
+    transition: all 0.3s ease;
+}
+
+.team-section details summary {
+    list-style: none; /* Убираем стандартную стрелочку в Chrome/Firefox */
+    position: relative;
+    padding-left: 25px;
+    user-select: none;
+}
+
+/* Убираем стандартную стрелочку в Safari */
+.team-section details summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Создаем свою красивую стрелочку перед текстом */
+.team-section details summary::before {
+    content: "▶";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: var(--primary-color);
+    transition: transform 0.2s ease;
+}
+
+/* Поворачиваем стрелочку при раскрытии списка */
+.team-section details[open] summary::before {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+/* Небольшой интерактив при наведении на плашку */
+.team-section details:hover {
+    border-color: var(--primary-color) !important;
+    background-color: #f1f5f9 !important;
+}
